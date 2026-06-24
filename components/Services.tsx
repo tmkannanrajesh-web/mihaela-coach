@@ -129,7 +129,7 @@ export default function Services() {
               </ul>
 
               <div className="pt-4 border-t border-navy-100">
-                <p className="text-xs text-charcoal-light">
+                <p className="text-sm text-charcoal-light">
                   <span className="font-semibold text-gold-700">Outcome:</span> {outcome}
                 </p>
               </div>

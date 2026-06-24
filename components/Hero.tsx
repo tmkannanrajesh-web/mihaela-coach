@@ -4,7 +4,7 @@ const WHO_I_HELP = [
   "Mid-career professionals (35–60) facing redundancy, layoffs, career stagnation or lack of progression",
   "Professionals experiencing burnout or considering a career change",
   "Individuals seeking more purpose, clarity, or direction",
-  "Women returning to work after raising children, caregiving responsibilities, divorce, or other major life transitions.",
+  "Women returning to work after raising children, caregiving responsibilities, divorce, or other major life transitions",
   "International and expat professionals targeting English-speaking markets",
 ];
 
@@ -86,7 +86,7 @@ export default function Hero() {
             >
               Book Your Free 20-Minute Discovery Call
             </a>
-            <p className="text-charcoal-light text-xs mt-3">
+            <p className="text-charcoal text-sm font-bold mt-3">
               1:1 online sessions • English-speaking clients worldwide (Romanian available on request)
             </p>
           </div>
