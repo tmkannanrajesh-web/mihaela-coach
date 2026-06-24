@@ -4,19 +4,21 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
 }
 
-body {
-  @apply bg-white text-charcoal antialiased;
-}
-
-::selection {
-  @apply bg-sage-200 text-navy-900;
+@layer base {
+  body {
+    @apply bg-white text-charcoal;
+  }
 }
 
 @layer utilities {
-  .section-padding {
-    @apply px-6 md:px-10 lg:px-16;
+  .gold-rule::before,
+  .gold-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #C9A84C;
+    max-width: 48px;
   }
 }

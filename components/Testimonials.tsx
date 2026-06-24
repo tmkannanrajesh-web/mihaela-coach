@@ -1,65 +1,60 @@
-import { Quote } from "lucide-react";
-
 const TESTIMONIALS = [
   {
     quote:
       "Mihaela helped me get a lot more clarity on where I was heading. What really stood out was her recruitment perspective — it made me rethink how I position my experience, especially for US roles.",
-    author: "Senior IT Professional",
+    name: "Senior IT Professional",
     location: "US",
   },
   {
     quote:
       "Working with Mihaela helped me bring more structure into my job search. I felt more confident in how I present my experience, and her understanding of what employers look for was very helpful.",
-    author: "Kavitha Arjun",
+    name: "Kavitha Arjun",
     location: "Project Manager, India",
   },
   {
     quote:
       "A very practical and structured approach. It helped me look at my experience a bit differently, particularly in terms of positioning. I felt more confident going into interviews after that.",
-    author: "Cloud Engineering Lead",
+    name: "Cloud Engineering Lead",
     location: "UK",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-navy-50/60">
-      <div className="max-w-8xl mx-auto section-padding">
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <span className="text-sage-600 font-semibold tracking-wide text-sm uppercase mb-3 block">
-            Testimonials
-          </span>
-          <h2 className="font-display text-3xl lg:text-4xl font-bold text-navy-900 mb-5 text-balance">
-            What Clients Say
-          </h2>
+    <section id="testimonials" className="bg-navy-50 py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="h-0.5 w-24 bg-gold-500 block" />
+            <span className="text-xl font-extrabold text-gold-600 uppercase tracking-[0.15em]">Testimonials</span>
+            <span className="h-0.5 w-24 bg-gold-500 block" />
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-7">
-          {TESTIMONIALS.map((t) => (
-            <figure
-              key={t.author}
-              className="bg-white rounded-2xl p-8 shadow-soft border border-navy-100 flex flex-col"
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {TESTIMONIALS.map(({ quote, name, location }) => (
+            <div
+              key={name}
+              className="bg-white rounded-2xl p-8 shadow-soft flex flex-col"
             >
-              <Quote
-                className="text-sage-200 mb-4"
-                size={36}
-                fill="currentColor"
-                strokeWidth={0}
-              />
-              <blockquote className="text-charcoal leading-relaxed text-[0.95rem] flex-1 mb-6">
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
-              <figcaption className="pt-5 border-t border-navy-100">
-                <p className="font-semibold text-navy-900 text-sm">
-                  {t.author}
-                </p>
-                <p className="text-xs text-charcoal-light mt-0.5">
-                  {t.location}
-                </p>
-              </figcaption>
-            </figure>
+              <span className="text-6xl leading-none font-serif text-gold-200 mb-2 select-none">
+                &ldquo;
+              </span>
+              <p className="text-charcoal italic leading-relaxed text-[15px] flex-1 mb-6">
+                {quote}
+              </p>
+              <div className="pt-5 border-t border-navy-100">
+                <div className="w-8 h-0.5 bg-gold-500 mb-3" />
+                <p className="font-semibold text-navy-900 text-sm">{name}</p>
+                <p className="text-charcoal-light text-xs mt-0.5">{location}</p>
+              </div>
+            </div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -9,9 +9,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mihaela Perelighin | Career Transition Strategist & Psychologist",
+  title: "Mihaela Perelighin — Career Strategy & Coaching",
   description:
-    "Psychologist and former corporate Talent Acquisition specialist helping mid-career professionals navigate career change, rebuild confidence, and secure their next opportunity. 12+ years in global recruitment, 1,500+ professionals hired.",
+    "Psychologist and former Global Talent Acquisition specialist with 12+ years experience helping professionals navigate career transitions. One-to-one coaching for CV, LinkedIn, interviews, and job search strategy.",
+  keywords: [
+    "career coaching",
+    "career transition",
+    "CV review",
+    "LinkedIn optimization",
+    "interview preparation",
+    "job search strategy",
+    "career clarity",
+    "Mihaela Perelighin",
+  ],
+  openGraph: {
+    title: "Mihaela Perelighin — Career Strategy & Coaching",
+    description:
+      "Move forward with clarity, confidence, and a strategy that works. One-to-one career coaching from a psychologist with 12+ years in global talent acquisition.",
+    url: "https://www.mihaelaperelighin.com",
+    siteName: "Mihaela Perelighin",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }
