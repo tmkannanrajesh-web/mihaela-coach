@@ -9,26 +9,82 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mihaela Perelighin — Career Strategy & Coaching",
+  metadataBase: new URL("https://www.mihaelaperelighin.com"),
+
+  title: {
+    default: "Mihaela Perelighin — Career Transition Strategist & Coach",
+    template: "%s | Mihaela Perelighin",
+  },
+
   description:
-    "Psychologist and former Global Talent Acquisition specialist with 12+ years experience helping professionals navigate career transitions. One-to-one coaching for CV, LinkedIn, interviews, and job search strategy.",
+    "Career Transition Strategist & Coach helping mid-career professionals navigate career change, rebuild confidence, and secure their next opportunity. Psychologist with 12+ years in global recruitment and 1,500+ professionals hired across US, UK & Canada.",
+
   keywords: [
+    "career transition coach",
+    "career strategist",
     "career coaching",
-    "career transition",
+    "mid-career professionals",
+    "redundancy coaching",
+    "career change",
     "CV review",
     "LinkedIn optimization",
     "interview preparation",
     "job search strategy",
-    "career clarity",
+    "career confidence",
     "Mihaela Perelighin",
+    "career coach psychologist",
   ],
+
+  authors: [{ name: "Mihaela Perelighin", url: "https://www.mihaelaperelighin.com" }],
+
+  creator: "Mihaela Perelighin",
+
   openGraph: {
-    title: "Mihaela Perelighin — Career Strategy & Coaching",
-    description:
-      "Move forward with clarity, confidence, and a strategy that works. One-to-one career coaching from a psychologist with 12+ years in global talent acquisition.",
+    type: "website",
     url: "https://www.mihaelaperelighin.com",
     siteName: "Mihaela Perelighin",
-    type: "website",
+    title: "Mihaela Perelighin — Career Transition Strategist & Coach",
+    description:
+      "Helping mid-career professionals navigate career change, rebuild confidence, and secure their next opportunity. Psychologist | 12+ Years in Global Recruitment | 1,500+ Professionals Hired across US, UK & Canada.",
+    images: [
+      {
+        url: "/images/mihaela-perelighin.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mihaela Perelighin — Career Transition Strategist & Coach",
+      },
+    ],
+    locale: "en_US",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Mihaela Perelighin — Career Transition Strategist & Coach",
+    description:
+      "Helping mid-career professionals navigate career change, rebuild confidence, and secure their next opportunity.",
+    images: ["/images/mihaela-perelighin.jpg"],
+  },
+
+  alternates: {
+    canonical: "https://www.mihaelaperelighin.com",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  icons: {
+    icon: "/images/mihaela-logo.jpg",
+    shortcut: "/images/mihaela-logo.jpg",
+    apple: "/images/mihaela-logo.jpg",
   },
 };
 
