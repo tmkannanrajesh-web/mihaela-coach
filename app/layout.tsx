@@ -38,6 +38,10 @@ export const metadata: Metadata = {
 
   authors: [{ name: "Mihaela Perelighin", url: "https://www.mihaelaperelighin.com" }],
   creator: "Mihaela Perelighin",
+  publisher: "Mihaela Perelighin",
+  category: "Career Coaching",
+  applicationName: "Mihaela Perelighin",
+  referrer: "origin-when-cross-origin",
 
   openGraph: {
     type: "website",
@@ -97,10 +101,10 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased">
 
-        {/* Google Analytics GA4 */}
+        {/* Google Analytics GA4 — G-269NHTDBJ5 */}
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XLY2G0Y1YT"
+          src="https://www.googletagmanager.com/gtag/js?id=G-269NHTDBJ5"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -108,11 +112,11 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XLY2G0Y1YT');
+            gtag('config', 'G-269NHTDBJ5');
           `}
         </Script>
 
-        {/* Microsoft Clarity */}
+        {/* Microsoft Clarity — xdikgg57vn */}
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
@@ -120,6 +124,47 @@ export default function RootLayout({
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "xdikgg57vn");
+          `}
+        </Script>
+
+        {/* Schema.org — Professional Service structured data */}
+        <Script id="schema-org" type="application/ld+json" strategy="afterInteractive">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Mihaela Perelighin — Career Transition Strategist & Coach",
+              "url": "https://www.mihaelaperelighin.com",
+              "description": "Career Transition Strategist & Coach helping mid-career professionals navigate career change, rebuild confidence, and secure their next opportunity.",
+              "founder": {
+                "@type": "Person",
+                "name": "Mihaela Perelighin",
+                "jobTitle": "Career Transition Strategist & Coach",
+                "description": "Psychologist with a Master's Degree in Psychology and 12+ years in global talent acquisition. 1,500+ professionals hired across US, UK & Canada.",
+                "sameAs": [
+                  "https://www.linkedin.com/in/mihaela-perelighin-a9760841/"
+                ]
+              },
+              "serviceType": [
+                "Career Coaching",
+                "Career Transition Coaching",
+                "CV Review",
+                "LinkedIn Optimization",
+                "Interview Preparation",
+                "Job Search Strategy"
+              ],
+              "areaServed": {
+                "@type": "Place",
+                "name": "Worldwide"
+              },
+              "availableLanguage": ["English", "Romanian"],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "hello@mihaelaperelighin.com",
+                "contactType": "customer support",
+                "availableLanguage": ["English", "Romanian"]
+              }
+            }
           `}
         </Script>
 
