@@ -5,11 +5,11 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Packages", href: "#packages" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/#services" },
+  { label: "Packages", href: "/#packages" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -31,7 +31,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[88px] flex items-center justify-between">
 
         {/* Logo — full width rectangular so MP monogram is fully visible */}
-        <a href="#" className="flex items-center group flex-shrink-0">
+        <a href="/" className="flex items-center group flex-shrink-0">
           <div className="relative" style={{ width: "200px", height: "72px" }}>
             <Image
               src="/images/mihaela-logo.jpg"
@@ -58,7 +58,7 @@ export default function Navbar() {
 
         {/* CTA — gold */}
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden md:inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-white text-base font-semibold px-6 py-3 rounded-md transition-colors shadow-sm"
         >
           Book Free Call
@@ -88,7 +88,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="mt-2 block text-center bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold px-5 py-2.5 rounded-md transition-colors"
           >
             Book Free Discovery Call
