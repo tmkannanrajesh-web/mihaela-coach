@@ -42,15 +42,15 @@ export default function AboutPage() {
 
       <main className="pt-[88px]">
 
-        {/* Full-width hero photo */}
+        {/* Full-width photo */}
         <section className="w-full">
-          <div className="relative w-full" style={{ height: "520px" }}>
+          <div className="relative w-full" style={{ height: "560px" }}>
             <Image
               src="/images/mihaela-about.jpg"
               alt="Mihaela Perelighin"
               fill
               priority
-              className="object-cover object-top"
+              className="object-cover object-center"
             />
           </div>
         </section>
@@ -60,22 +60,22 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto px-4">
             <div className="grid grid-cols-3 divide-x divide-gray-200">
 
-              <div className="py-8 px-6 text-center">
-                <p className="text-5xl font-bold text-gold-600 mb-2">12+</p>
+              <div className="py-10 px-6 text-center">
+                <p className="text-5xl font-bold text-gold-600 mb-3">12+</p>
                 <p className="text-charcoal font-medium leading-snug">
                   Years in Global<br />Recruitment
                 </p>
               </div>
 
-              <div className="py-8 px-6 text-center">
-                <p className="text-5xl font-bold text-gold-600 mb-2">1,500+</p>
+              <div className="py-10 px-6 text-center">
+                <p className="text-5xl font-bold text-gold-600 mb-3">1,500+</p>
                 <p className="text-charcoal font-medium leading-snug">
                   Professionals<br />Hired
                 </p>
               </div>
 
-              <div className="py-8 px-6 text-center">
-                <p className="text-3xl font-bold text-gold-600 mb-2">Master's Degree</p>
+              <div className="py-10 px-6 text-center">
+                <p className="text-3xl font-bold text-gold-600 mb-3 leading-tight">Master's Degree</p>
                 <p className="text-charcoal font-medium leading-snug">
                   Psychological Counselling
                 </p>
@@ -122,13 +122,13 @@ export default function AboutPage() {
               that works in today's job market.
             </p>
 
-            {/* CTA Button */}
+            {/* CTA */}
             <div className="pt-4">
               <a
                 href="/#contact"
                 className="flex items-center justify-center gap-3 bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors shadow-sm text-base w-full"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <line x1="16" y1="2" x2="16" y2="6" strokeLinecap="round"/>
                   <line x1="8" y1="2" x2="8" y2="6" strokeLinecap="round"/>
