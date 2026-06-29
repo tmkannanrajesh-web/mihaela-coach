@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 const WHO_I_HELP = [
@@ -68,65 +69,30 @@ export default function Hero() {
             <p className="text-xl sm:text-2xl text-charcoal leading-snug mb-6 font-medium">
               Helping Mid-Career Professionals Navigate Career Change, Rebuild Confidence, and Secure Their Next Opportunity
             </p>
-            <p className="text-charcoal text-sm leading-relaxed mb-3 font-bold">
+            <p className="text-charcoal-light text-sm font-bold leading-relaxed mb-3">
               Psychologist | Talent Acquisition Specialist in a Multinational Corporate Environment | 12+ Years in Global Recruitment | 1,500+ Professionals Hired across US, UK &amp; Canada
             </p>
-
-            {/* Script-style signature name in gold */}
-            <p
-              className="text-gold-600 font-bold text-2xl mb-8"
-              style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic" }}
-            >
+            <p className="text-gold-600 text-2xl mb-8 mt-1" style={{ fontFamily: "Georgia, serif", fontStyle: "italic" }}>
               Mihaela Perelighin
             </p>
 
             <a
-              href="#contact"
-              className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-4 rounded-md transition-colors shadow-sm text-sm"
+              href="/#contact"
+              className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-4 rounded-md transition-colors shadow-sm text-sm mb-4"
             >
               Book Your Free 20-Minute Discovery Call
             </a>
-            <p className="text-charcoal text-sm font-bold mt-3">
+            <p className="text-charcoal-light text-sm font-bold mt-3">
               1:1 online sessions • English-speaking clients worldwide (Romanian available on request)
             </p>
           </div>
 
-          {/* Right: oval photo — thick gold border + close thin outer ring */}
+          {/* Right: oval photo */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative flex items-center justify-center" style={{ width: "400px", height: "500px" }}>
-
-              {/* Thin outer ring — 12px outside the photo */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "-12px",
-                  left: "-12px",
-                  width: "calc(100% + 24px)",
-                  height: "calc(100% + 24px)",
-                  borderRadius: "50%",
-                  border: "1px solid #C9A84C",
-                  opacity: 0.55,
-                  pointerEvents: "none",
-                  zIndex: 0,
-                }}
-              />
-
-              {/* Photo with thick gold border */}
-              <div
-                className="relative z-10 overflow-hidden w-full h-full"
-                style={{
-                  borderRadius: "50%",
-                  border: "5px solid #C9A84C",
-                  boxShadow: "0 8px 40px rgba(201,168,76,0.2)",
-                }}
-              >
-                <Image
-                  src="/images/mihaela-perelighin.jpg"
-                  alt="Mihaela Perelighin — Career Transition Strategist & Coach"
-                  fill
-                  priority
-                  className="object-cover object-top"
-                />
+              <div style={{ position: "absolute", top: "-12px", left: "-12px", width: "calc(100% + 24px)", height: "calc(100% + 24px)", borderRadius: "50%", border: "1px solid #C9A84C", opacity: 0.55, pointerEvents: "none", zIndex: 0 }} />
+              <div className="relative z-10 overflow-hidden w-full h-full" style={{ borderRadius: "50%", border: "5px solid #C9A84C", boxShadow: "0 8px 40px rgba(201,168,76,0.2)" }}>
+                <Image src="/images/mihaela-perelighin.jpg" alt="Mihaela Perelighin — Career Transition Strategist & Coach" fill priority className="object-cover object-top" />
               </div>
             </div>
           </div>
@@ -206,10 +172,7 @@ export default function Hero() {
             ))}
           </div>
           <div className="text-center">
-            <a
-              href="#services"
-              className="inline-flex items-center border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-white hover:border-gold-500 font-semibold px-7 py-3.5 rounded-md transition-colors text-sm"
-            >
+            <a href="#services" className="inline-flex items-center border border-gold-500 text-gold-400 hover:bg-gold-500 hover:text-white hover:border-gold-500 font-semibold px-7 py-3.5 rounded-md transition-colors text-sm">
               Explore Services
             </a>
           </div>
@@ -227,18 +190,13 @@ export default function Hero() {
           <ol className="space-y-6">
             {HOW_WE_WORK.map((step, i) => (
               <li key={step} className="flex items-start gap-5">
-                <span className="w-9 h-9 rounded-full bg-gold-500 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">
-                  {i + 1}
-                </span>
+                <span className="w-9 h-9 rounded-full bg-gold-500 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">{i + 1}</span>
                 <span className="text-charcoal leading-relaxed pt-1.5">{step}</span>
               </li>
             ))}
           </ol>
           <div className="mt-12 text-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors shadow-sm text-sm"
-            >
+            <a href="/#contact" className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors shadow-sm text-sm">
               Book Your Free 20-Minute Discovery Call
             </a>
           </div>
@@ -257,9 +215,7 @@ export default function Hero() {
             {PACKAGES_SUMMARY.map(({ name, sessions, desc, popular }) => (
               <div
                 key={name}
-                className={`relative rounded-xl border p-7 flex flex-col ${
-                  popular ? "border-gold-400" : "bg-white border-navy-100"
-                }`}
+                className={`relative rounded-xl border p-7 flex flex-col ${popular ? "border-gold-400" : "bg-white border-navy-100"}`}
                 style={popular ? { background: "linear-gradient(135deg, #16212f 0%, #1c2b42 100%)" } : {}}
               >
                 {popular && (
@@ -267,29 +223,17 @@ export default function Hero() {
                     ★ Most Popular
                   </div>
                 )}
-                <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${popular ? "text-gold-400" : "text-gold-600"}`}>
-                  {sessions}
-                </p>
-                <h3 className={`font-bold text-lg mb-3 leading-snug ${popular ? "text-white" : "text-navy-900"}`}>
-                  {name}
-                </h3>
-                <p className={`text-sm leading-relaxed flex-1 ${popular ? "text-navy-300" : "text-charcoal-light"}`}>
-                  {desc}
-                </p>
+                <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${popular ? "text-gold-400" : "text-gold-600"}`}>{sessions}</p>
+                <h3 className={`font-bold text-lg mb-3 leading-snug ${popular ? "text-white" : "text-navy-900"}`}>{name}</h3>
+                <p className={`text-sm leading-relaxed flex-1 ${popular ? "text-navy-300" : "text-charcoal-light"}`}>{desc}</p>
               </div>
             ))}
           </div>
           <div className="text-center flex flex-wrap gap-4 justify-center">
-            <a
-              href="#packages"
-              className="inline-flex items-center border border-navy-200 hover:border-navy-400 text-navy-800 font-medium px-7 py-3.5 rounded-md transition-colors text-sm"
-            >
+            <a href="#packages" className="inline-flex items-center border border-navy-200 hover:border-navy-400 text-navy-800 font-medium px-7 py-3.5 rounded-md transition-colors text-sm">
               Click here for details
             </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors shadow-sm text-sm"
-            >
+            <a href="/#contact" className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-7 py-3.5 rounded-md transition-colors shadow-sm text-sm">
               Book Your Free Call
             </a>
           </div>

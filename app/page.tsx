@@ -1,192 +1,120 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Career Transition Coaching",
-  description:
-    "One-to-one career transition coaching for mid-career professionals facing redundancy, career stagnation, or career change. Psychologist & recruiter with 12+ years experience across US, UK & Canada.",
-  alternates: {
-    canonical: "https://www.mihaelaperelighin.com/career-transition-coaching",
-  },
+  title: "About Mihaela Perelighin",
+  description: "Mihaela Perelighin is a Career Transition Strategist & Coach. Psychologist with a Master's Degree in Psychological Counselling and 12+ years in global talent acquisition.",
+  alternates: { canonical: "https://www.mihaelaperelighin.com/about" },
   openGraph: {
-    title: "Career Transition Coaching | Mihaela Perelighin",
-    description:
-      "One-to-one career transition coaching for mid-career professionals. Navigate career change, rebuild confidence, and secure your next opportunity.",
-    url: "https://www.mihaelaperelighin.com/career-transition-coaching",
+    title: "About Mihaela Perelighin | Career Transition Strategist & Coach",
+    description: "Psychologist and former Global Talent Acquisition specialist helping mid-career professionals navigate career change.",
+    url: "https://www.mihaelaperelighin.com/about",
   },
 };
 
-const FAQS = [
-  {
-    q: "Who is career transition coaching for?",
-    a: "It is designed for mid-career professionals (35–60) facing redundancy, layoffs, career stagnation, burnout, or those considering a significant career change.",
-  },
-  {
-    q: "How many sessions will I need?",
-    a: "This depends on your goals. The Career Clarity Package (3 sessions) is ideal for direction. The Career Reinvention Program (6 sessions) covers full repositioning. The Career Transition Accelerator (12 sessions) provides comprehensive support.",
-  },
-  {
-    q: "Do you work with international clients?",
-    a: "Yes. Sessions are conducted online and I work with English-speaking clients worldwide. Romanian is available on request.",
-  },
-  {
-    q: "What makes you different from other career coaches?",
-    a: "I combine a Master's Degree in Psychology with over 12 years of hands-on recruitment experience inside a multinational corporate environment. I understand both sides of the hiring process — what candidates experience and what employers are actually looking for.",
-  },
-  {
-    q: "How do I get started?",
-    a: "Book a free 20-minute Discovery Call. We'll discuss your situation, goals, and the most appropriate next steps.",
-  },
-];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mihaela Perelighin",
+  jobTitle: "Career Transition Strategist & Coach",
+  url: "https://www.mihaelaperelighin.com",
+  image: "https://www.mihaelaperelighin.com/images/mihaela-about.jpg",
+  sameAs: ["https://www.linkedin.com/in/mihaela-perelighin-a9760841/"],
+};
 
-const WHAT_YOU_GET = [
-  "Clarity on your career direction and realistic options",
-  "A structured plan tailored to your goals and timeline",
-  "Confidence to present yourself effectively in the job market",
-  "A professionally positioned CV and LinkedIn profile",
-  "Interview preparation and mock sessions",
-  "Ongoing accountability and support throughout the transition",
-];
-
-const WHO_ITS_FOR = [
-  "Mid-career professionals (35–60) facing redundancy or layoffs",
-  "Professionals experiencing career stagnation or lack of progression",
-  "Individuals considering a career change but unsure where to start",
-  "Professionals experiencing burnout and seeking more purpose",
-  "Women returning to work after a career break",
-  "International and expat professionals targeting English-speaking markets",
-];
-
-export default function CareerTransitionCoachingPage() {
+export default function AboutPage() {
   return (
     <>
+      <Script id="schema-about" type="application/ld+json" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Navbar />
       <main className="pt-[88px]">
 
-        {/* Hero */}
-        <section className="bg-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="h-0.5 w-24 bg-gold-500 block" />
-              <span className="text-xl font-extrabold text-gold-600 uppercase tracking-[0.15em]">
-                Career Transition Coaching
-              </span>
-              <span className="h-0.5 w-24 bg-gold-500 block" />
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-navy-900 leading-tight mb-6">
-              Navigate Career Change with Clarity and Confidence
-            </h1>
-            <p className="text-lg text-charcoal-light leading-relaxed mb-8 max-w-2xl mx-auto">
-              One-to-one coaching for mid-career professionals facing redundancy,
-              career stagnation, or a significant career change. Helping you move
-              forward with a strategy that works in today's job market.
-            </p>
-            <a
-              href="/#contact"
-              className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors shadow-sm text-sm"
-            >
-              Book Your Free 20-Minute Discovery Call
-            </a>
-            <p className="text-charcoal-light text-xs mt-3">
-              1:1 online sessions • English-speaking clients worldwide (Romanian available on request)
-            </p>
+        {/* Full-width photo */}
+        <section className="w-full overflow-hidden bg-navy-900" style={{ height: "500px" }}>
+          <div className="relative w-full h-full">
+            <Image
+              src="/images/mihaela-about.jpg"
+              alt="Mihaela Perelighin"
+              fill
+              priority
+              className="object-cover"
+              style={{ objectPosition: "50% 20%" }}
+            />
           </div>
         </section>
 
-        {/* Who it's for + What you get */}
-        <section className="bg-navy-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="h-0.5 w-24 bg-gold-500 block" />
-                <span className="text-xl font-extrabold text-gold-600 uppercase tracking-[0.15em]">Who It's For</span>
-                <span className="h-0.5 w-24 bg-gold-500 block" />
+        {/* 3 stat cards — exactly as in Image 7 */}
+        <section className="bg-white">
+          <div className="max-w-3xl mx-auto">
+            <div className="grid grid-cols-3 divide-x divide-gray-200 border-b border-gray-100">
+              <div className="py-10 px-6 text-center">
+                <p className="text-5xl font-bold text-gold-600 leading-none mb-3">12+</p>
+                <p className="text-charcoal text-sm font-medium leading-snug">Years in Global<br />Recruitment</p>
               </div>
-              <ul className="space-y-4">
-                {WHO_ITS_FOR.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-gold-500 mt-2 flex-shrink-0" />
-                    <span className="text-charcoal leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="h-0.5 w-24 bg-gold-500 block" />
-                <span className="text-xl font-extrabold text-gold-600 uppercase tracking-[0.15em]">What You Get</span>
-                <span className="h-0.5 w-24 bg-gold-500 block" />
+              <div className="py-10 px-6 text-center">
+                <p className="text-5xl font-bold text-gold-600 leading-none mb-3">1,500+</p>
+                <p className="text-charcoal text-sm font-medium leading-snug">Professionals<br />Hired</p>
               </div>
-              <ul className="space-y-4">
-                {WHAT_YOU_GET.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-gold-500 mt-2 flex-shrink-0" />
-                    <span className="text-charcoal leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-          </div>
-        </section>
-
-        {/* About Mihaela — brief */}
-        <section className="bg-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <span className="h-0.5 w-24 bg-gold-500 block" />
-              <span className="text-xl font-extrabold text-gold-600 uppercase tracking-[0.15em]">Why Work With Me</span>
-              <span className="h-0.5 w-24 bg-gold-500 block" />
-            </div>
-            <p className="text-charcoal leading-relaxed text-lg mb-4">
-              Unlike many career coaches, I combine psychological expertise with more than 12 years of hands-on recruitment experience inside a multinational corporate environment.
-            </p>
-            <p className="text-charcoal leading-relaxed text-lg mb-4">
-              Having recruited and hired more than 1,500 professionals across international markets, I help clients position themselves strategically and confidently in today's competitive job market.
-            </p>
-            <p className="text-charcoal leading-relaxed text-lg">
-              I understand both sides of the hiring process: what candidates experience and what employers are actually looking for.
-            </p>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="bg-navy-950 py-20">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-center gap-4 mb-12">
-              <span className="h-0.5 w-24 bg-gold-500 block" />
-              <span className="text-xl font-extrabold text-gold-400 uppercase tracking-[0.15em]">FAQ</span>
-              <span className="h-0.5 w-24 bg-gold-500 block" />
-            </div>
-            <div className="space-y-6">
-              {FAQS.map(({ q, a }) => (
-                <div key={q} className="border-b border-navy-800 pb-6">
-                  <h3 className="text-white font-semibold text-lg mb-2">{q}</h3>
-                  <p className="text-navy-300 leading-relaxed">{a}</p>
-                </div>
-              ))}
+              <div className="py-10 px-6 text-center">
+                <p className="text-2xl font-bold text-gold-600 leading-tight mb-3">Master's Degree</p>
+                <p className="text-charcoal text-sm font-medium leading-snug">Psychological Counselling</p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="bg-white py-20 text-center">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-navy-900 mb-4">
-              Ready to Take the Next Step?
-            </h2>
-            <p className="text-charcoal-light mb-8 text-lg">
-              Book a free 20-minute Discovery Call and we'll discuss your situation, goals, and the most appropriate next steps.
+        {/* Bio — exact content from document */}
+        <section className="bg-white py-14">
+          <div className="max-w-2xl mx-auto px-6 space-y-5 text-charcoal leading-relaxed text-[17px]">
+
+            <p>
+              I'm Mihaela Perelighin, a psychologist with a Master's Degree in Psychological
+              Counselling and over 12 years of experience working in Talent Acquisition within a
+              multinational corporate environment.
             </p>
-            <a
-              href="/#contact"
-              className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors shadow-sm text-sm"
-            >
-              Book Your Free Discovery Call
-            </a>
+            <p>
+              Throughout my career, I have recruited and hired more than 1,500 professionals across
+              international markets, including the United States, United Kingdom, and Canada.
+            </p>
+            <p>
+              Having reviewed thousands of applications and conducted countless interviews, I
+              understand what helps candidates stand out in competitive job markets.
+            </p>
+            <p>
+              This unique combination of psychological expertise and hands-on recruitment
+              experience allows me to support clients from both perspectives: understanding human
+              behavior, confidence, and motivation, while also knowing exactly how employers
+              evaluate candidates and make hiring decisions.
+            </p>
+            <p>
+              I work one-to-one with every client, offering personalized, practical guidance tailored to
+              their goals, challenges, and career context.
+            </p>
+
+            <p className="font-bold text-charcoal">
+              My mission is simple: to help you move forward with clarity, confidence, and a strategy
+              that works in today's job market.
+            </p>
+
+            {/* CTA — full width gold button with calendar icon */}
+            <div className="pt-4">
+              <a
+                href="/#contact"
+                className="flex items-center justify-center gap-3 bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-md transition-colors shadow-sm text-base w-full"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <line x1="16" y1="2" x2="16" y2="6" strokeLinecap="round"/>
+                  <line x1="8" y1="2" x2="8" y2="6" strokeLinecap="round"/>
+                  <line x1="3" y1="10" x2="21" y2="10" strokeLinecap="round"/>
+                </svg>
+                Book Your Free 20-Minute Discovery Call
+              </a>
+            </div>
+
           </div>
         </section>
 
