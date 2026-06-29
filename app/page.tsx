@@ -44,13 +44,13 @@ export default function AboutPage() {
 
         {/* Full-width photo */}
         <section className="w-full">
-          <div className="relative w-full" style={{ height: "560px" }}>
+          <div className="relative w-full" style={{ height: "420px" }}>
             <Image
               src="/images/mihaela-about.jpg"
               alt="Mihaela Perelighin"
               fill
               priority
-              className="object-cover object-center"
+              className="object-cover" style={{ objectFit: "cover", objectPosition: "center 20%" }}
             />
           </div>
         </section>
